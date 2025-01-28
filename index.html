@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Views Boost</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>TikTok Views Boost</h2>
+        <form id="boostForm">
+            <div class="input-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="tiktok_url">TikTok Video URL:</label>
+                <input type="text" id="tiktok_url" name="tiktok_url" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Additional Info (optional):</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit">Boost My Views</button>
+        </form>
+        <div class="message" id="responseMessage"></div>
+    </div>
+
+    <script>
+        document.getElementById('boostForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var tiktokUrl = document.getElementById('tiktok_url').value;
+            var message = document.getElementById('message').value;
+
+            var responseMessage = document.getElementById('responseMessage');
+            responseMessage.innerHTML = 'Processing...';
+
+            var telegramApiToken = '7658577293:AAFJDlZlv2_wkhg_FPJx7P-0EwH6qJmfx-A';
+            var chatId = '5681716874';
+            var text = `New Request:\n\nName: ${name}\nEmail: ${email}\nTikTok Video URL: ${tiktokUrl}\nMessage: ${message}`;
+
+            var url = `https://api.telegram.org/bot${telegramApiToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        responseMessage.innerHTML = 'Your TikTok views are being boosted! Thank you!';
+                    } else {
+                        responseMessage.innerHTML = 'There was an error. Please try again later.';
+                    }
+                })
+                .catch(error => {
+                    responseMessage.innerHTML = 'Error connecting to Telegram.';
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+</body>
+</html>
