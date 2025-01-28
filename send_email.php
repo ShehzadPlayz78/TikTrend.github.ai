@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "ffshehzad9@gmail.com";  // Apna email address yahan daalein
     $subject = "New TikTok Views Boost Request";
     $body = "New Request:\n\nName: $name\nEmail: $email\nTikTok Video URL: $tiktok_url\nMessage: $message";
-    $headers = "From: no-reply@yourdomain.com";
+    $headers = "From: ffshehzadff@gmail.com";
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
