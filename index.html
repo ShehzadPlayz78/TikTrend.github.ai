@@ -7,38 +7,43 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #181818;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: white;
         }
         .container {
-            background-color: #fff;
+            background-color: #333;
             padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             width: 100%;
             max-width: 500px;
         }
         h2 {
             text-align: center;
-            color: #333;
+            color: #ff2d55;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
         .input-group {
             margin-bottom: 15px;
         }
         input[type="text"], input[type="email"], textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-top: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #555;
             border-radius: 5px;
+            background-color: #444;
+            color: white;
         }
         button {
-            background-color: #4CAF50;
+            background-color: #ff2d55;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -47,12 +52,18 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #ff1a40;
         }
         .message {
             text-align: center;
             margin-top: 20px;
-            color: green;
+            color: #4CAF50;
+        }
+        .tik-image {
+            width: 100%;
+            margin-top: 20px;
+            display: block;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -80,6 +91,8 @@
             <button type="submit">Boost My Views</button>
         </form>
         <div class="message" id="responseMessage"></div>
+        <!-- Example TikTok-inspired image -->
+        <img class="tik-image" src="https://www.tiktok.com/favicon.ico" alt="TikTok Logo">
     </div>
 
 </body>
