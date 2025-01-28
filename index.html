@@ -60,7 +60,7 @@
 
     <div class="container">
         <h2>TikTok Views Boost</h2>
-        <form id="boostForm">
+        <form id="boostForm" method="POST" action="send_email.php">
             <div class="input-group">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -81,40 +81,6 @@
         </form>
         <div class="message" id="responseMessage"></div>
     </div>
-
-    <script>
-        document.getElementById('boostForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var tiktokUrl = document.getElementById('tiktok_url').value;
-            var message = document.getElementById('message').value;
-
-            var responseMessage = document.getElementById('responseMessage');
-            responseMessage.innerHTML = 'Processing...';
-
-            var telegramApiToken = '7658577293:AAHhZ148hgYk68TC8INhRAqRgEYtr8cyD6M';
-            var chatId = '5681716874';
-            var text = `New Request:\n\nName: ${name}\nEmail: ${email}\nTikTok Video URL: ${tiktokUrl}\nMessage: ${message}`;
-
-            var url = `https://api.telegram.org/bot${telegramApiToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
-
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.ok) {
-                        responseMessage.innerHTML = 'Your TikTok views are being boosted! Thank you!';
-                    } else {
-                        responseMessage.innerHTML = 'There was an error. Please try again later.';
-                    }
-                })
-                .catch(error => {
-                    responseMessage.innerHTML = 'Error connecting to Telegram.';
-                    console.error('Error:', error);
-                });
-        });
-    </script>
 
 </body>
 </html>
