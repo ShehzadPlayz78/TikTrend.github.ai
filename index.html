@@ -3,97 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Views Boost</title>
+    <title>TikTok Views & Likes Service</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #181818;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-        }
-        .container {
-            background-color: #333;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-        }
-        h2 {
+            background-color: #121212;
+            color: #fff;
             text-align: center;
-            color: #ff2d55;
-            font-size: 24px;
-            margin-bottom: 20px;
+            padding: 20px;
         }
-        .input-group {
-            margin-bottom: 15px;
+        h1 {
+            color: #00ff99;
         }
-        input[type="text"], input[type="email"], textarea {
+        .service-box {
+            background: #222;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00ff99;
+        }
+        form {
+            background: #222;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00ff99;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input, select, button {
             width: 100%;
-            padding: 12px;
-            margin-top: 5px;
-            border: 1px solid #555;
-            border-radius: 5px;
-            background-color: #444;
-            color: white;
-        }
-        button {
-            background-color: #ff2d55;
-            color: white;
-            padding: 12px 20px;
+            padding: 10px;
+            margin: 5px 0;
             border: none;
             border-radius: 5px;
-            width: 100%;
+        }
+        button {
+            background-color: #00ff99;
+            color: #000;
+            font-size: 16px;
             cursor: pointer;
-        }
-        button:hover {
-            background-color: #ff1a40;
-        }
-        .message {
-            text-align: center;
-            margin-top: 20px;
-            color: #4CAF50;
-        }
-        .tik-image {
-            width: 100%;
-            margin-top: 20px;
-            display: block;
-            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>TikTok Views Boost</h2>
-        <form action="https://formspree.io/f/mdkagdzd" method="POST">
-            <div class="input-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-                <label for="tiktok_url">TikTok Video URL:</label>
-                <input type="text" id="tiktok_url" name="tiktok_url" required>
-            </div>
-            <div class="input-group">
-                <label for="message">Additional Info (optional):</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-            <button type="submit">Boost My Views</button>
-        </form>
-        <div class="message" id="responseMessage"></div>
-        <!-- Example TikTok-inspired image -->
-        <img class="tik-image" src="https://www.tiktok.com/favicon.ico" alt="TikTok Logo">
+    <h1>🚀 TikTok Views & Likes Service 🚀</h1>
+
+    <div class="service-box">
+        <h2>📌 Views Packages</h2>
+        <p>1000 Views - ₹50</p>
+        <p>5000 Views - ₹200</p>
+        <p>10000 Views - ₹350</p>
     </div>
+
+    <div class="service-box">
+        <h2>📌 Likes Packages</h2>
+        <p>100 Likes - ₹30</p>
+        <p>500 Likes - ₹120</p>
+        <p>1000 Likes - ₹200</p>
+    </div>
+
+    <h2>📝 Place Your Order</h2>
+    <form action="https://formspree.io/f/xbldyrpw" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="tiktok_id" placeholder="Your TikTok ID" required>
+        <select name="service">
+            <option value="1000 Views">1000 Views - ₹50</option>
+            <option value="5000 Views">5000 Views - ₹200</option>
+            <option value="10000 Views">10000 Views - ₹350</option>
+            <option value="100 Likes">100 Likes - ₹30</option>
+            <option value="500 Likes">500 Likes - ₹120</option>
+            <option value="1000 Likes">1000 Likes - ₹200</option>
+        </select>
+        <button type="submit">Submit Order</button>
+    </form>
 
 </body>
 </html>
